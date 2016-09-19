@@ -11,23 +11,55 @@
 using namespace std;
 
 int player_choice();
+void game_runner();
+int process_choice(int input);
+
 
 int main()
 {
+    game_runner(); 
+    
+    return 0;
+}
+
+void game_runner() 
+{
+    int input;
+
     Menu title;
 	
     cout << "Lost Night" << endl;
     title.display_options(); 
     
-    cout << player_choice() << endl;
-	
-    return 0;
+    input = player_choice();
+    process_choice(input);
 }
 
 int player_choice()
 {
-    int input;
+    int value;
     
-    cin >> input;
-    return input;
+    cin >> value;
+    return value;
 }
+
+int process_choice(int input)
+{
+    switch (input) {
+        case 1:
+            cout << "NEW GAME SELECTED" << endl;
+            break; 
+        case 2:
+            cout << "LOAD GAME SELECTED" << endl;
+            break;
+        case 3:
+            cout << "CREDITS" << endl;
+            break;
+        default:
+            cout << "BAD INPUT" << endl;
+            break;
+    }
+
+    return 0;
+}
+
