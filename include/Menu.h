@@ -8,9 +8,9 @@
 class Menu
 {
 private:
-    Menu();
     std::vector<std::string> options;             
 public:
+    Menu();
     void display_options() const;  
 };
 #endif

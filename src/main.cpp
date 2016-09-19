@@ -10,38 +10,24 @@
 
 using namespace std;
 
+int player_choice();
+
 int main()
 {
-	cout << "Lost Night" << endl;
+    Menu title;
+	
+    cout << "Lost Night" << endl;
+    title.display_options(); 
+    
+    cout << player_choice() << endl;
 	
     return 0;
 }
 
-/* Player Member Functions */
-std::string Player::get_name() const
+int player_choice()
 {
-    return name;
-}
-
-std::string Player::get_job() const
-{
-    return job;
-}
-
-
-/* Menu Member Functions */
-
-Menu::Menu()
-{
-    options.push_back("New Game");
-    options.push_back("Load Game");
-    options.push_back("Credits");
-}
-
-void Menu::display_options() const
-{
-    std::vector<std::string>::size_type i;
-    for (i = 0; i < options.size(); i++) {
-        cout << i+1 << ")" << options[i] << endl;
-    }
+    int input;
+    
+    cin >> input;
+    return input;
 }

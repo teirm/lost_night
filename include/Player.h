@@ -12,6 +12,7 @@ private:
     std::string name; 
     std::string job;
 public:
+    Player(); 
     std::string get_name() const;
     std::string get_job() const;        
 };

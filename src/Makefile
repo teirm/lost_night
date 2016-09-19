@@ -10,7 +10,7 @@ LDIR = ../lib
 _DEPS = Menu.h Player.h
 DEPS = $(patsubst %,$(INC_DIR)/%,$(_DEPS))
 
-_OBJ = main.o
+_OBJ = main.o Player.o Menu.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 # .o depends on .c version and .h
