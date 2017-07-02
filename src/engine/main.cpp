@@ -5,8 +5,8 @@
 #include <string>
 #include <vector>
 
-#include "Player.h"
-#include "Menu.h"
+#include <player/Player.H>
+#include <engine/Menu.H>
 
 using namespace std;
 
@@ -20,7 +20,7 @@ int main()
     game_runner(); 
     
     return 0;
-}
+} 
 
 void game_runner() 
 {

@@ -1,7 +1,7 @@
 // Source code for the player class
 // Includes the member functions for player
 
-#include "Player.h"
+#include <player/Player.H>
 
 /* Player Member Functions */
 std::string Player::get_name() const

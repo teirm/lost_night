@@ -1,6 +1,6 @@
 INC_DIR = ../include
-CC=g++
-CFLAGS=-I$(INC_DIR) -Wall -Wextra
+CXX=clang++
+CXXFLAGS=-I$(INC_DIR) -std=c++11 -Wall -Wextra
 
 ODIR=../obj
 LDIR = ../lib
@@ -17,13 +17,14 @@ OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 # $@ left of :
 # $< first item of DEPS
 $(ODIR)/%.o: %.cpp $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
 
 # $^ right of :
 game: $(OBJ) 
-	$(CC) -o $@ $^ $(CFLAGS)
+	$(CXX) -o $@ $^ $(CXXFLAGS)
 
 .PHONY: clean
 
 clean:
-	rm -f $(ODIR)/*.o *~ core $(INC_DIR)
+	rm -f $(ODIR)/*.o
+	rm -f game
