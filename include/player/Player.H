@@ -8,12 +8,21 @@
 
 class Player
 {
-private:
-    std::string name; 
-    std::string job;
 public:
-    Player(); 
+    Player();
+    Player(std::string name,
+           int age,
+           int money):
+           name(name), age(age), money(money) { } 
+    virtual ~Player();
     std::string get_name() const;
     std::string get_job() const;        
+    int get_age() const;
+    int get_money();
+private:
+    int money;
+    int age;
+    std::string name; 
+    std::string job;
 };
 #endif

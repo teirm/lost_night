@@ -1,5 +1,4 @@
-// Source code for the player class
-// Includes the member functions for player
+/* Base class for player. */
 
 #include <player/Player.H>
 
