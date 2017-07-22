@@ -1,7 +1,7 @@
 // Start Menu for Lost Night
 
-#ifndef GUARD_Menu_h
-#define GUARD_Menu_h
+#ifndef GUARD_MENU_H
+#define GUARD_MENU_H
 
 #include <string>
 #include <vector>
