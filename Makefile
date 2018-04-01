@@ -8,11 +8,12 @@ SRC_DIR = source
 
 ENEMIES_DIR = $(SRC_DIR)/enemies
 ENGINE_DIR = $(SRC_DIR)/engine
-ENVIRONMENT_DIR = $(SRC_DIR)/environment
 PLAYER_DIR = $(SRC_DIR)/player
+JOB_DIR = $(SRC_DIR)/jobs
 
 ENGINE_INCLUDE = $(INC_DIR)/engine
 PLAYER_INCLUDE = $(INC_DIR)/player
+JOB_INCLUDE = $(INC_DIR)/jobs
 ENEMIES_INCLUDE = $(INC_DIR)/enemies
 
 #LIBS=-lm
@@ -22,6 +23,9 @@ ENGINE_DEPS = $(patsubst %,$(ENGINE_INCLUDE)/%,$(_ENGINE_DEPS))
 
 _PLAYER_DEPS = Player.H
 PLAYER_DEPS = $(patsubst %,$(PLAYER_INCLUDE)/%,$(_PLAYER_DEPS))
+
+_JOB_DEPS = Job.H
+JOB_DEPS = $(patsubst %,$(JOB_INCLUDE)/%,$(_JOB_DEPS))
 
 _ENEMIES_DEPS = Enemy.H
 ENEMY_DEPS = $(patsubst %,$(ENEMIES_INCLUDE)/%,$(_ENEMIES_DEPS))
