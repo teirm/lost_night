@@ -2,9 +2,9 @@ INC_DIR = include
 CXX=clang++
 CXXFLAGS=-I$(INC_DIR) -std=c++11 -Wall -Wextra -Werror
 
-ODIR= obj
-LDIR = lib
-SRC_DIR = src
+ODIR= objects
+LDIR = library
+SRC_DIR = source
 
 ENEMIES_DIR = $(SRC_DIR)/enemies
 ENGINE_DIR = $(SRC_DIR)/engine
